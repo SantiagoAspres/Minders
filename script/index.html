@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prueba de SDK Vue/Vuetify</title>
+
+  <!-- Estilos globales de Vuetify y Material Design Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet" />
+
+  <!-- SDK compilado -->
+  <script src="my-sdk.umd.js"></script>
+</head>
+<body>
+  <h1>Ejemplo de integración del SDK</h1>
+
+  <my-sdk id="sdk"></my-sdk>
+
+  <!-- Contenedor necesario para Vuetify -->
+  <div data-app="true"></div>
+
+  <script>
+    const sdk = document.getElementById('sdk');
+
+    sdk.initialize({
+      apiKey: 'mi-clave-secreta',
+      projectId: 'Project-sdk-Tag',
+      apiUrl: 'http://localhost:8080/feedback',
+      debug: false
+    });
+
+    document.addEventListener('sdk-ready', (event) => {
+      const sdk = event.target;
+      console.log("SDK listo. Abriendo modal...");
+      if (typeof sdk.openModal === 'function') {
+        sdk.openModal();
+      } else {
+        console.error("SDK Error: openModal no existe.");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "name": "sdk",
+  "version": "1.0.0",
+  "description": "SDK con Web Component en Vue 2 y Vuetify 2",
+  "main": "dist/my-sdk.umd.js",
+  "module": "dist/my-sdk.esm.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "test": "jest --maxWorkers=2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "vue": "^2.7.16",
+    "vuetify": "^2.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^30.2.0",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "jest": "^27.5.1",
+    "jest-environment-jsdom": "^27.5.1",
+    "vue-jest": "^3.0.7",
+    "vue-loader": "^15.11.1",
+    "vue-template-compiler": "^2.7.16",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1"
+  }
+}
