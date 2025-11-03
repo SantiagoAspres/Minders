@@ -55,7 +55,7 @@ Es un proyecto web hecho con Nuxt 2, Vue 2 y Vuetify 2 el cual utiliza nuestro c
 Para correr este proyecto ejecutamos el comando:
 
 ```
-yarn install
+yarn --frozen-lockfile
 yarn dev
 ```
 
